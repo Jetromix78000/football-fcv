@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classement Football - Poule Espoir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background: #1E3A5F;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        /* Nouveau style du lien "Classement" */
+        .button-container {
+            display: flex;
+            align-items: center;
+            background-color: #1E3A5F;
+            border-radius: 20px;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .button-container:hover {
+            background-color: white;
+            color: #1E3A5F;
+            transform: scale(1.05);
+        }
+
+        .button-text {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            flex-grow: 1;
+        }
+        h1 {
+            color: #1E3A5F;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #1E3A5F;
+            color: white;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <!-- Bouton "Classement" sans l'icône SVG -->
+                <a href="#" class="button-container">
+                    <p class="button-text">Classement</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Classement Poule Espoir - Après 9 Journées</h1>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Position</th>
+                    <th>Équipe</th>
+                    <th>PTS</th>
+                    <th>MJ</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>D</th>
+                    <th>BP</th>
+                    <th>BC</th>
+                    <th>Diff</th>
+                    <th>Reports</th>
+                </tr>
+                <tr><td>1</td><td>Lascars Donetsk</td><td>33</td><td>9</td><td>8</td><td>0</td><td>1</td><td>94</td><td>30</td><td>+64</td><td>0</td></tr>
+                <tr><td>2</td><td>FCV +2</td><td>30</td><td>9</td><td>7</td><td>0</td><td>2</td><td>52</td><td>40</td><td>+12</td><td>2</td></tr>
+                <tr><td>3</td><td>Vittoria Asbash -1</td><td>29</td><td>8</td><td>7</td><td>0</td><td>1</td><td>62</td><td>34</td><td>+28</td><td>0</td></tr>
+                <tr><td>4</td><td>Houilles City -1</td><td>24</td><td>9</td><td>5</td><td>0</td><td>4</td><td>54</td><td>55</td><td>-1</td><td>0</td></tr>
+                <tr><td>5</td><td>Réal Tfcc</td><td>23</td><td>9</td><td>4</td><td>2</td><td>3</td><td>49</td><td>49</td><td>0</td><td>0</td></tr>
+                <tr><td>6</td><td>PES</td><td>20</td><td>8</td><td>4</td><td>0</td><td>4</td><td>37</td><td>44</td><td>-7</td><td>1</td></tr>
+                <tr><td>7</td><td>Buro SG</td><td>19</td><td>9</td><td>3</td><td>1</td><td>5</td><td>45</td><td>96</td><td>-51</td><td>0</td></tr>
+                <tr><td>8</td><td>LFLA 78</td><td>15</td><td>9</td><td>2</td><td>0</td><td>7</td><td>44</td><td>57</td><td>-13</td><td>0</td></tr>
+                <tr><td>9</td><td>AS Nanterre</td><td>9</td><td>9</td><td>0</td><td>0</td><td>9</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>10</td><td>Todo Match -1</td><td>9</td><td>7</td><td>1</td><td>3</td><td>2</td><td>18</td><td>47</td><td>-29</td><td>1</td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
