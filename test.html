@@ -14,52 +14,50 @@
             color: #333;
             margin: 0;
             display: flex;
+            flex-direction: column;
         }
         .sidebar {
-            width: 200px;
+            width: 100%;
             background: #1E3A5F;
             color: white;
             padding: 20px;
-            height: 100vh;
             box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
         }
         .sidebar ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: space-around;
         }
         .sidebar ul li {
             margin: 15px 0;
         }
-        /* Nouveau style du lien "Classement" */
         .button-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: white; /* Couleur de fond blanche */
+            background-color: white;
             border-radius: 20px;
             padding: 12px 20px;
-            color: #1E3A5F; /* Couleur du texte bleu */
+            color: #1E3A5F;
             text-decoration: none;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, background-color 0.3s, color 0.3s;
             cursor: pointer;
             text-align: center;
         }
-
         .button-container:hover {
-            background-color: white; /* Reste blanc au survol */
-            color: #1E3A5F; /* Texte devient bleu au survol */
+            background-color: white;
+            color: #1E3A5F;
             transform: scale(1.05);
         }
-
         .button-text {
             font-size: 16px;
             font-weight: bold;
             margin: 0;
         }
-
         .container {
-            max-width: 900px;
+            max-width: 100%;
             margin: auto;
             background: white;
             padding: 20px;
@@ -70,11 +68,12 @@
         h1 {
             color: #1E3A5F;
             text-align: center;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
         }
         .table-container {
             margin-top: 20px;
+            overflow-x: auto;
         }
         table {
             width: 100%;
@@ -83,7 +82,7 @@
             overflow: hidden;
         }
         th, td {
-            padding: 12px;
+            padding: 8px;
             border: 1px solid #ddd;
             text-align: center;
         }
@@ -92,6 +91,15 @@
             color: white;
             text-transform: uppercase;
         }
+        th.position {
+            width: 5%; /* Réduire la largeur de la colonne Position */
+        }
+        th.equipe {
+            width: 25%; /* Augmenter la largeur de la colonne Équipe */
+        }
+        th.reports {
+            width: 5%; /* Réduire la largeur de la colonne Reports */
+        }
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
@@ -99,13 +107,33 @@
             background-color: #f1f1f1;
             transition: background-color 0.3s;
         }
+        @media (min-width: 600px) {
+            body {
+                flex-direction: row;
+            }
+            .sidebar {
+                width: 200px;
+                height: 100vh;
+            }
+            .sidebar ul {
+                flex-direction: column;
+            }
+            .container {
+                max-width: 900px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            th, td {
+                padding: 12px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <ul>
             <li>
-                <!-- Bouton "Classement" sans l'icône SVG -->
                 <a href="#" class="button-container">
                     <p class="button-text">Classement</p>
                 </a>
@@ -117,8 +145,8 @@
         <div class="table-container">
             <table>
                 <tr>
-                    <th>Position</th>
-                    <th>Équipe</th>
+                    <th class="position">Position</th>
+                    <th class="equipe">Équipe</th>
                     <th>PTS</th>
                     <th>MJ</th>
                     <th>V</th>
@@ -127,7 +155,7 @@
                     <th>BP</th>
                     <th>BC</th>
                     <th>Diff</th>
-                    <th>Reports</th>
+                    <th class="reports">Reports</th>
                 </tr>
                 <tr><td>1</td><td>Lascars Donetsk</td><td>33</td><td>9</td><td>8</td><td>0</td><td>1</td><td>94</td><td>30</td><td>+64</td><td>0</td></tr>
                 <tr><td>2</td><td>FCV +2</td><td>30</td><td>9</td><td>7</td><td>0</td><td>2</td><td>52</td><td>40</td><td>+12</td><td>2</td></tr>
