@@ -124,6 +124,17 @@ th {
     text-transform: uppercase;
 }
 
+th.buts,
+td.buts {
+    width: 50px; /* Réduit la largeur de la colonne "Buts" */
+    padding: 4px; /* Réduit le padding de la colonne "Buts" */
+}
+
+th.temps-course,
+td.temps-course {
+    width: 100px; /* Ajuste la largeur de la colonne "Temps de course" */
+}
+
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
@@ -254,4 +265,39 @@ td:nth-child(2) {
     td:nth-child(2) {
         min-width: 100px; /* Ajustement spécifique pour mobile */
     }
+}
+
+/* Styles pour la ligne surlignée */
+tr.highlight {
+    background-color: #ffe4b5; /* Couleur de surlignage jaune */
+    color: #333; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet moderne */
+}
+
+/* Style pour la section en développement */
+.info-developpement {
+    text-align: center; /* Centrer le contenu */
+    margin: 20px 0; /* Ajouter de l'espace autour de la section */
+}
+
+.development-text {
+    font-size: 18px; /* Taille du texte */
+    color: #1e3a5f; /* Couleur du texte */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Style pour l'intégration Giphy */
+.giphy-embed {
+    text-align: center; /* Centrer le GIF */
+    margin-top: 20px;
+}
+
+.giphy-embed iframe {
+    max-width: 100%; /* Rendre le GIF responsive */
+    height: auto; /* Gérer la hauteur de manière responsive */
+    border-radius: 10px; /* Coins arrondis pour l'image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce autour du GIF */
 }
