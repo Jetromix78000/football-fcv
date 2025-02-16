@@ -47,7 +47,7 @@
             text-align: center;
         }
         .button-container:hover {
-            background-color: white;
+            background-color: #f0f0f0;
             color: #1E3A5F;
             transform: scale(1.05);
         }
@@ -70,44 +70,7 @@
             text-align: center;
             font-size: 24px;
             font-weight: bold;
-            white-space: nowrap; /* Empêche les retours à la ligne */
-        }
-        .table-container {
-            margin-top: 20px;
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        th, td {
-            padding: 8px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-        th {
-            background-color: #1E3A5F;
-            color: white;
-            text-transform: uppercase;
-        }
-        th.position {
-            width: 5%; /* Réduire la largeur de la colonne Position */
-        }
-        th.equipe {
-            width: 25%; /* Augmenter la largeur de la colonne Équipe */
-            white-space: nowrap; /* Empêche les retours à la ligne */
-        }
-        th.reports {
-            width: 5%; /* Réduire la largeur de la colonne Reports */
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        tr:hover {
-            background-color: #f1f1f1;
-            transition: background-color 0.3s;
+            white-space: nowrap;
         }
         @media (min-width: 600px) {
             body {
@@ -119,34 +82,13 @@
             }
             .sidebar ul {
                 flex-direction: column;
+                align-items: center;
             }
             .container {
                 max-width: 900px;
             }
             h1 {
                 font-size: 28px;
-            }
-            th, td {
-                padding: 12px;
-            }
-        }
-
-        /* Nouveau code CSS ajouté */
-        th.equipe, td:nth-child(2) {
-            min-width: 120px; /* Augmente légèrement l'espace de la colonne Équipe */
-            white-space: nowrap; /* Empêche les retours à la ligne */
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 18px; /* Réduit la taille de police sur mobile */
-            }
-            th, td {
-                font-size: 12px; /* Réduit la taille de police sur mobile */
-                padding: 6px; /* Diminue l'espace intérieur pour optimiser la largeur */
-            }
-            th.equipe, td:nth-child(2) {
-                min-width: 100px; /* Ajustement spécifique pour mobile */
             }
         }
     </style>
@@ -155,41 +97,20 @@
     <div class="sidebar">
         <ul>
             <li>
-                <a href="#" class="button-container">
+                <a href="classement.html" class="button-container">
                     <p class="button-text">Classement</p>
+                </a>
+            </li>
+            <li>
+                <a href="performances.html" class="button-container">
+                    <p class="button-text">Performances</p>
                 </a>
             </li>
         </ul>
     </div>
     <div class="container">
         <h1>Classement Poule Espoir - Après 9 Journées</h1>
-        <div class="table-container">
-            <table>
-                <tr>
-                    <th class="position">Position</th>
-                    <th class="equipe">Équipe</th>
-                    <th>PTS</th>
-                    <th>MJ</th>
-                    <th>V</th>
-                    <th>N</th>
-                    <th>D</th>
-                    <th>BP</th>
-                    <th>BC</th>
-                    <th>Diff</th>
-                    <th class="reports">Reports</th>
-                </tr>
-                <tr><td>1</td><td>Lascars Donetsk</td><td>33</td><td>9</td><td>8</td><td>0</td><td>1</td><td>94</td><td>30</td><td>+64</td><td>0</td></tr>
-                <tr><td>2</td><td>FCV +2</td><td>30</td><td>9</td><td>7</td><td>0</td><td>2</td><td>52</td><td>40</td><td>+12</td><td>2</td></tr>
-                <tr><td>3</td><td>Vittoria Asbash -1</td><td>29</td><td>8</td><td>7</td><td>0</td><td>1</td><td>62</td><td>34</td><td>+28</td><td>0</td></tr>
-                <tr><td>4</td><td>Houilles City -1</td><td>24</td><td>9</td><td>5</td><td>0</td><td>4</td><td>54</td><td>55</td><td>-1</td><td>0</td></tr>
-                <tr><td>5</td><td>Réal Tfcc</td><td>23</td><td>9</td><td>4</td><td>2</td><td>3</td><td>49</td><td>49</td><td>0</td><td>0</td></tr>
-                <tr><td>6</td><td>PES</td><td>20</td><td>8</td><td>4</td><td>0</td><td>4</td><td>37</td><td>44</td><td>-7</td><td>1</td></tr>
-                <tr><td>7</td><td>Buro SG</td><td>19</td><td>9</td><td>3</td><td>1</td><td>5</td><td>45</td><td>96</td><td>-51</td><td>0</td></tr>
-                <tr><td>8</td><td>LFLA 78</td><td>15</td><td>9</td><td>2</td><td>0</td><td>7</td><td>44</td><td>57</td><td>-13</td><td>0</td></tr>
-                <tr><td>9</td><td>AS Nanterre</td><td>9</td><td>9</td><td>0</td><td>0</td><td>9</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                <tr><td>10</td><td>Todo Match -1</td><td>9</td><td>7</td><td>1</td><td>3</td><td>2</td><td>18</td><td>47</td><td>-29</td><td>1</td></tr>
-            </table>
-        </div>
+        <!-- Contenu de la page Classement -->
     </div>
 </body>
 </html>
