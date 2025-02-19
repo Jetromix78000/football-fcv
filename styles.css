@@ -1,307 +1,459 @@
+body.home {
+  background: url("terrain.jpeg") no-repeat center center/cover;
+  animation: dynamicBackground 10s infinite;
+  background-size: cover; /* Assure que l'image couvre tout l'écran */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes dynamicBackground {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: brightness(120%);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+}
+
 body {
-    font-family: "Roboto", sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
 }
 
 .sidebar {
-    width: 200px; /* Ajustez la largeur selon vos besoins */
-    height: 100vh; /* Assurez-vous que la hauteur prend toute la vue */
-    background: #1e3a5f;
-    color: white;
-    padding: 20px;
-    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Fixe la position pour qu'elle reste visible lors du défilement */
-    top: 0;
-    left: 0;
+  width: 200px; /* Ajustez la largeur selon vos besoins */
+  height: 100vh; /* Assurez-vous que la hauteur prend toute la vue */
+  background: #1e3a5f;
+  color: white;
+  padding: 20px;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* ajuste la position pour qu'elle reste visible lors du défilement */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-around;
 }
 
 .sidebar ul li {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 
 .button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .button {
-    background-color: #1e3a5f; /* Bleu par défaut */
-    color: white;
-    padding: 10px 15px; /* Réduit le padding des boutons */
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
-    display: block;
-    width: fit-content;
-    margin: 10px auto;
-    text-align: center;
+  background-color: #1e3a5f; /* Bleu par défaut */
+  color: white;
+  padding: 10px 15px; /* Réduit le padding des boutons */
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  display: block;
+  width: fit-content;
+  margin: 10px auto;
+  text-align: center;
 }
 
 .button.active {
-    background-color: white; /* Blanc pour la page active */
-    color: #1e3a5f; /* Bleu pour le texte */
-    border: 2px solid #1e3a5f; /* Ajoute une bordure pour démarquer */
+  background-color: white; /* Blanc pour la page active */
+  color: #1e3a5f; /* Bleu pour le texte */
+  border: 2px solid #1e3a5f; /* Ajoute une bordure pour démarquer */
 }
 
 .button:hover {
-    background-color: white; /* Fond blanc au survol */
-    color: #1e3a5f; /* Texte bleu au survol */
-    border: 2px solid #1e3a5f;
+  background-color: white; /* Fond blanc au survol */
+  color: #1e3a5f; /* Texte bleu au survol */
+  border: 2px solid #1e3a5f;
 }
 
 /* Styles spécifiques pour les boutons de la page index.html */
 .home .button {
-    background-color: #1e3a5f; /* Bleu par défaut */
-    color: white;
+  background-color: #1e3a5f; /* Bleu par défaut */
+  color: white;
 }
 
 .home .button:hover {
-    background-color: #1e3a5f; /* Fond bleu au survol */
-    color: white; /* Texte blanc au survol */
-    transform: scale(1.05);
+  background-color: #1e3a5f; /* Fond bleu au survol */
+  color: white; /* Texte blanc au survol */
+  transform: scale(1.05);
 }
 
 .container {
-    max-width: 100%;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    flex-grow: 1;
-    width: 80%;
-    max-width: 500px;
+  max-width: 90%; /* Réduit la largeur maximale pour les petits écrans */
+  margin: 0 auto; /* Centre l'élément horizontalement */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fond blanc semi-transparent pour lisibilité */
+  
+  padding: 20px; /* Ajoute du padding pour l'espacement intérieur */
+  border-radius: 10px; /* Ajoute des coins arrondis */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour un effet de profondeur */
 }
 
 /* Styles pour les titres */
 h1 {
-    font-size: 20px; /* Ajuste la taille de la police selon tes préférences */
-    padding: 0 10px; /* Ajoute un padding modéré autour du texte */
-    text-align: center;
-    margin-bottom: 15px; /* Un peu d'espace sous le titre */
-    word-wrap: break-word; /* Permet au texte de se diviser pour éviter qu'il dépasse */
-    width: fit-content; /* S'ajuste à la taille du texte */
-    max-width: 90%; /* Empêche le texte de devenir trop large sur des écrans plus grands */
-    margin-left: auto; /* Centre le titre horizontalement */
-    margin-right: auto; /* Centre le titre horizontalement */
+  font-size: clamp(18px, 3vw, 28px); /* Taille adaptative */
+  padding: 0 8px; /* Assure un peu d'espace autour */
+  text-align: center;
+  word-wrap: break-word;
+  width: 100%; /* Prend toute la largeur disponible */
+  max-width: 80%; /* Empêche qu'il soit trop large */
+  margin: 0 auto; /* Centre le titre */
+  white-space: normal; /* Prevent text from getting squeezed */
+  overflow: visible; /* Prevent clipping */
+  margin-bottom: 20px; /* Adjust this margin if necessary */
+  position: relative; /* Ensure it's not causing overlap */
 }
 
 .table-container {
-    margin-top: 20px;
-    overflow-x: auto;
+
+
+  position: relative;
+  margin-top: 20px; /* Add space to prevent overlap */
+
+  overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+  width: 100%; /* Assure que le conteneur prend toute la largeur disponible */
+
+  padding-top: 10px; /* Add space between title and table */
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th,
 td {
-    padding: 8px;
-    border: 1px solid #ddd;
-    text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
 th {
-    background-color: #1e3a5f;
-    color: white;
-    text-transform: uppercase;
-}
-
-th.buts,
-td.buts {
-    width: 50px; /* Réduit la largeur de la colonne "Buts" */
-    padding: 4px; /* Réduit le padding de la colonne "Buts" */
-}
-
-th.temps-course,
-td.temps-course {
-    width: 100px; /* Ajuste la largeur de la colonne "Temps de course" */
+  background-color: #1e3a5f;
+  color: white;
+  text-transform: uppercase;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 tr:hover {
-    background-color: #f1f1f1;
-    transition: background-color 0.3s;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
 }
 
-@media (min-width: 600px) {
-    body {
-        flex-direction: row;
-        height: 100vh;
-    }
-    .sidebar {
-        width: 200px;
-        height: 100vh;
-    }
-    .sidebar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    .container {
-        max-width: 900px;
-    }
-    h1 {
-        font-size: 28px;
-    }
-    th,
-    td {
-        padding: 12px;
-    }
+@media (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    height: 100vh;
+    font-size: 18px;
+  }
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+  }
+  .sidebar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    /*max-width: 900px;*/
+    max-width: 80%; /* Utilise plus d'espace sur grand écran */
+  }
+  h1 {
+    font-size: 36px;
+  }
+  th,
+  td {
+    padding: 12px;
+  }
 }
 
 /* Styles pour les petits écrans (téléphones) */
 @media (max-width: 600px) {
-    body {
-        display: flex;
-        flex-direction: column; /* Affichage en colonne */
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        margin: 0;
-        background-color: #f4f4f4; /* Le fond du site */
-    }
+  body {
+    display: flex;
+    flex-direction: column; /* Affichage en colonne */
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    background-color: #f4f4f4; /* Le fond du site */
+  }
 
-    h1 {
-        font-size: 18px; /* Réduit la taille de la police pour les petits écrans */
-        width: fit-content; /* Assure que la largeur s'ajuste au texte */
-        max-width: 85%; /* Réduit un peu la largeur maximale sur mobile pour éviter qu'il ne soit trop large */
-        padding: 0 10px; /* Ajuste le padding horizontal pour éviter le débordement */
-    }
+  body.home {
+    background-size: cover; /* Assure que l'image couvre tout l'écran */
+    background-position: center; /* Centre l'image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Assure que le body prend toute la hauteur de l'écran */
+  }
 
-    .sidebar {
-        width: 100%;
-        height: auto;
-        padding: 5px 10px; /* Réduit le padding vertical et horizontal pour gagner de l'espace */
-        box-shadow: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-    }
+  h1 {
+    font-size: clamp(
+      16px,
+      5vw,
+      22px
+    ); /* Ajuste mieux la taille sur petit écran */
+    max-width: 95%; /* Réduit la largeur maximale */
+    word-break: break-word; /* Permet de couper le mot si nécessaire */
+    margin-top: 20px; /* Ajoute un espace en haut pour éviter que le contenu soit collé au bord */
+  }
 
-    .sidebar ul {
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 0;
-        margin: 0;
-    }
+  .sidebar {
+    width: 100%;
+    height: auto; /* Ajuste la hauteur automatiquement */ 
+    padding: 5px 10px; /* Réduit le padding vertical et horizontal pour gagner de l'espace */
+    box-shadow: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
 
-    .sidebar ul li {
-        margin: 5px 10px; /* Réduit l'espacement des éléments de la sidebar */
-    }
+  .sidebar ul {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+  }
 
-    .container {
-        max-width: 100%;
-        margin: 70px 20px 20px 20px; /* Ajouter un espace en haut pour le header */
-        background-color: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        width: 90%; /* Le conteneur prendra 90% de la largeur de l'écran */
-    }
+  .sidebar ul li {
+    margin: 5px 10px; /* Réduit l'espacement des éléments de la sidebar */
+  }
 
-    .button-container {
-        display: flex;
-        flex-direction: column; /* Les boutons seront affichés verticalement */
-        gap: 8px; /* Réduit l'espacement entre les boutons */
-    }
+  .container {
+    max-width: 100%;
+    margin: 20px; /* Ajoute un espace autour du conteneur */
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Le conteneur prendra 90% de la largeur de l'écran */
+  }
 
-    .button {
-        width: fit-content; /* Les boutons prendront la largeur nécessaire */
-        padding: 10px; /* Réduit encore la taille des boutons */
-        font-size: 12px; /* Réduit la taille de la police */
-        text-align: center;
-        border-radius: 6px; /* Réduit légèrement les bords */
-        background-color: #1e3a5f;
-        color: white;
-        transition: 0.3s;
-        cursor: pointer;
-        margin: 0 auto; /* Centre les boutons horizontalement */
-    }
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Les boutons seront affichés verticalement */
+    gap: 10px; /* Ajoute un espacement entre les boutons */
+  }
 
-    .button:hover {
-        background-color: #145399;
-        transform: scale(1.05);
-    }
+  .button {
+    width: fit-content; /* Les boutons prendront la largeur nécessaire */
+    padding: 10px; /* Réduit encore la taille des boutons */
+    font-size: 16px; /* Réduit la taille de la police */
+    text-align: center;
+    border-radius: 6px; /* Réduit légèrement les bords */
+    background-color: #1e3a5f;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 0 auto; /* Centre les boutons horizontalement */
+  }
+
+  .button:hover {
+    background-color: #145399;
+    transform: scale(1.05);
+  }
+
+  th.position,
+  td:nth-child(1) {
+    width: 30px; /* Ajustement spécifique pour la colonne Position */
+  }
+  th.joueur,
+  td:nth-child(2) {
+    min-width: 60px; /* Réduit la largeur minimale de la colonne Joueur pour mobile */
+    padding-left: 2px; /* Réduit encore le padding horizontal gauche pour mobile */
+    padding-right: 2px; /* Réduit encore le padding horizontal droit pour mobile */
+  }
+  th.equipe,
+  td:nth-child(3) {
+    min-width: 60px; /* Réduit la largeur minimale de la colonne Équipe pour mobile */
+    padding-left: 2px; /* Réduit encore le padding horizontal gauche pour mobile */
+    padding-right: 2px; /* Réduit encore le padding horizontal droit pour mobile */
+  }
+  th.buts,
+  td:nth-child(4),
+  th.passes,
+  td:nth-child(4) {
+    width: 40px; /* Ajustement spécifique pour les colonnes Buts et Passes */
+  }
+  .table-container {
+    overflow-x: auto; /* Permet le défilement horizontal sur les petits écrans */
+  }
 }
 
 /* Nouveau code CSS ajouté */
 th.equipe,
 td:nth-child(2) {
-    min-width: 120px; /* Augmente légèrement l'espace de la colonne Équipe */
-    white-space: nowrap; /* Empêche les retours à la ligne */
+  min-width: 120px; /* Augmente légèrement l'espace de la colonne Équipe */
+  white-space: nowrap; /* Empêche les retours à la ligne */
 }
 
 @media (max-width: 600px) {
-    h1 {
-        font-size: 18px; /* Réduit la taille de police sur mobile */
-    }
-    th,
-    td {
-        font-size: 12px; /* Réduit la taille de police sur mobile */
-        padding: 6px; /* Diminue l'espace intérieur pour optimiser la largeur */
-    }
-    th.equipe,
-    td:nth-child(2) {
-        min-width: 100px; /* Ajustement spécifique pour mobile */
-    }
+  h1 {
+    font-size: 18px; /* Réduit la taille de police sur mobile */
+  }
+  th,
+  td {
+    font-size: 12px; /* Réduit la taille de police sur mobile */
+    padding: 6px; /* Diminue l'espace intérieur pour optimiser la largeur */
+  }
+  th.equipe,
+  td:nth-child(2) {
+    min-width: 100px; /* Ajustement spécifique pour mobile */
+  }
 }
 
 /* Styles pour la ligne surlignée */
 tr.highlight {
-    background-color: #ffe4b5; /* Couleur de surlignage jaune */
-    color: #333; /* Couleur du texte */
-    font-weight: bold; /* Texte en gras */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet moderne */
+  background-color: #ffe4b5; /* Couleur de surlignage jaune */
+  color: #333; /* Couleur du texte */
+  font-weight: bold; /* Texte en gras */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet moderne */
 }
 
 /* Style pour la section en développement */
 .info-developpement {
-    text-align: center; /* Centrer le contenu */
-    margin: 20px 0; /* Ajouter de l'espace autour de la section */
+  text-align: center; /* Centrer le contenu */
+  margin: 20px 0; /* Ajouter de l'espace autour de la section */
 }
 
 .development-text {
-    font-size: 18px; /* Taille du texte */
-    color: #1e3a5f; /* Couleur du texte */
-    font-weight: bold;
-    margin-top: 10px;
+  font-size: 18px; /* Taille du texte */
+  color: #1e3a5f; /* Couleur du texte */
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 /* Style pour l'intégration Giphy */
 .giphy-embed {
-    text-align: center; /* Centrer le GIF */
-    margin-top: 20px;
+  text-align: center; /* Centrer le GIF */
+  margin-top: 20px;
 }
 
 .giphy-embed iframe {
-    max-width: 100%; /* Rendre le GIF responsive */
-    height: auto; /* Gérer la hauteur de manière responsive */
-    border-radius: 10px; /* Coins arrondis pour l'image */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce autour du GIF */
+  max-width: 100%; /* Rendre le GIF responsive */
+  height: auto; /* Gérer la hauteur de manière responsive */
+  border-radius: 10px; /* Coins arrondis pour l'image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce autour du GIF */
+}
+
+/* Styles pour les colonnes spécifiques des tableaux "Meilleurs buteurs" et "Meilleurs passeurs" */
+th.position,
+td.position {
+  width: 40px; /* Ajustement spécifique pour la colonne Position */
+}
+
+th.joueur,
+td.joueur {
+  min-width: 80px; /* Réduit la largeur minimale de la colonne Joueur */
+  white-space: nowrap; /* Empêche les retours à la ligne */
+  padding-left: 4px; /* Réduit le padding horizontal gauche */
+  padding-right: 4px; /* Réduit le padding horizontal droit */
+}
+
+th.equipe,
+td.equipe {
+  min-width: 80px; /* Réduit la largeur minimale de la colonne Équipe */
+  white-space: nowrap; /* Empêche les retours à la ligne */
+  padding-left: 4px; /* Réduit le padding horizontal gauche */
+  padding-right: 4px; /* Réduit le padding horizontal droit */
+}
+
+/* Styles pour les petits écrans (téléphones) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 18px; /* Réduit la taille de police sur mobile */
+  }
+  th,
+  td {
+    font-size: 12px; /* Réduit la taille de police sur mobile */
+    padding: 6px; /* Diminue l'espace intérieur pour optimiser la largeur */
+  }
+  th.position,
+  td:nth-child(1) {
+    width: 30px; /* Ajustement spécifique pour la colonne Position */
+  }
+  th.joueur,
+  td:nth-child(2) {
+    min-width: 60px; /* Réduit la largeur minimale de la colonne Joueur pour mobile */
+    padding-left: 2px; /* Réduit encore le padding horizontal gauche pour mobile */
+    padding-right: 2px; /* Réduit encore le padding horizontal droit pour mobile */
+  }
+  th.equipe,
+  td:nth-child(3) {
+    min-width: 60px; /* Réduit la largeur minimale de la colonne Équipe pour mobile */
+    padding-left: 2px; /* Réduit encore le padding horizontal gauche pour mobile */
+    padding-right: 2px; /* Réduit encore le padding horizontal droit pour mobile */
+  }
+  th.buts,
+  td:nth-child(4),
+  th.passes,
+  td:nth-child(4) {
+    width: 40px; /* Ajustement spécifique pour les colonnes Buts et Passes */
+  }
+  .table-container {
+    overflow-x: auto; /* Permet le défilement horizontal sur les petits écrans */
+  }
+}
+
+/* Styles pour les écrans plus larges (PC) */
+@media (min-width: 600px) {
+  th.joueur,
+  td.joueur {
+    min-width: 100px; /* Ajuste la largeur minimale de la colonne Joueur pour PC */
+    padding-left: 6px; /* Ajuste le padding horizontal gauche pour PC */
+    padding-right: 6px; /* Ajuste le padding horizontal droit pour PC */
+  }
+  th.equipe,
+  td.equipe {
+    min-width: 100px; /* Ajuste la largeur minimale de la colonne Équipe pour PC */
+    padding-left: 6px; /* Ajuste le padding horizontal gauche pour PC */
+    padding-right: 6px; /* Ajuste le padding horizontal droit pour PC */
+  }
 }

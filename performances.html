@@ -1,50 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Performances - Poule Espoir</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="sidebar">
-        <ul>
-            <li><a href="index.html" class="button">Accueil</a></li>
-            <li><a href="classement.html" class="button">Classement</a></li>
-            <li><a href="performances.html" class="button active">Performances</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html" class="button">Accueil</a></li>
+        <li><a href="classement.html" class="button">Classement</a></li>
+        <li>
+          <a href="performances.html" class="button active">Performances</a>
+        </li>
+      </ul>
     </div>
 
     <div class="container">
-        <h1>Performances Individuelles</h1>
-        
-        <div class="table-container">
-            <table>
-                <tr>
-                    <th>Joueur</th>
-                    <th class="buts">Buts</th>
-                    <th>Passes</th>
-                    <th class="temps-course">Temps de course</th>
-                    <th>Distance</th>
-                    <th>Possession</th>
-                    <th>Dribble</th>
-                    <th>Tirs</th>
-                </tr>
-                <!-- Ajouter des données plus tard -->
-                <tr><td>-</td><td class="buts">-</td><td>-</td><td class="temps-course">-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-            </table>
-        </div>
-
-        <!-- Section du message de développement -->
-        <div class="info-developpement">
-            <p class="development-text">Suite des infos en cours de développement ... 🤖</p>
-        </div>
-
-        <!-- Intégration du GIF avec Giphy -->
-        <div class="giphy-embed">
-            <iframe src="https://giphy.com/embed/jSVqNlG3bwNcPhf2QV" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-        </div>
-        
+      <h1>Graphique des Performances</h1>
+      <div class="chart-container">
+        <img
+          src="performance.png"
+          alt="Performance FCV loisirs"
+          style="
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          "
+        />
+      </div>
     </div>
-</body>
+  </body>
 </html>
