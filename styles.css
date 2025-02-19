@@ -11,11 +11,15 @@ body {
 }
 
 .sidebar {
-    width: 100%;
+    width: 200px; /* Ajustez la largeur selon vos besoins */
+    height: 100vh; /* Assurez-vous que la hauteur prend toute la vue */
     background: #1e3a5f;
     color: white;
     padding: 20px;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixe la position pour qu'elle reste visible lors du défilement */
+    top: 0;
+    left: 0;
 }
 
 .sidebar ul {
